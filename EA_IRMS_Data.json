@@ -1,0 +1,252 @@
+{"Moran et al": {
+    "A": {
+        "13C/Unsub": {
+            "Delta VPDB": -85.76,
+            "Error": 0.05
+        }
+    },
+    "F": {
+        "13C/Unsub": {
+            "Delta VPDB": -77.61,
+            "Error": 0.02
+        }
+    },
+    "K": {
+        "13C/Unsub": {
+            "Delta VPDB": -106.31,
+            "Error": 0.29
+        }
+    },
+    "I": {
+        "13C/Unsub": {
+            "Delta VPDB": -77.37,
+            "Error": 0.01
+        }
+    },
+    "M": {
+        "13C/Unsub": {
+            "Delta VPDB": -103.83,
+            "Error": 0.05
+            }
+    },
+    "C": {
+        "13C/Unsub": {
+            "Delta VPDB": -86.18,
+            "Error": 0.08
+            }
+        }
+    },
+    "Solvent 2022": {
+        "A": {
+            "13C/Unsub": {
+                "Delta VPDB": -85.4,
+                "Error": 0
+            }
+        },
+        "F": {
+            "13C/Unsub": {
+                "Delta VPDB": -78.5,
+                "Error": 0
+            }
+        },
+        "K": {
+            "13C/Unsub": {
+                "Delta VPDB": -103.6,
+                "Error": 0
+            }
+        },
+        "I": {
+            "13C/Unsub": {
+                "Delta VPDB": -79.3,
+                "Error": 0
+            }
+        },
+        "M": {
+            "13C/Unsub": {
+                "Delta VPDB": -105.2,
+                "Error": 0
+            }
+        },
+        "C": {
+            "13C/Unsub": {
+                "Delta VPDB": -88.1,
+                "Error": 0
+            }
+        },
+        "SIG": {
+            "13C/Unsub": {
+                "Delta VPDB": -106.3,
+                "Error": 0
+            }
+        }
+    },
+    "Weighing 2023": {
+        "A": {
+            "13C/Unsub": {
+                "Delta VPDB": -81.9,
+                "Error": 0
+            }
+        },
+        "F": {
+            "13C/Unsub": {
+                "Delta VPDB": -76.3,
+                "Error": 0
+            }
+        },
+        "K": {
+            "13C/Unsub": {
+                "Delta VPDB": -103.2,
+                "Error": 0
+            }
+        },
+        "I": {
+            "13C/Unsub": {
+                "Delta VPDB": -72.4,
+                "Error": 0
+            }
+        },
+        "M": {
+            "13C/Unsub": {
+                "Delta VPDB": -101.3,
+                "Error": 0
+            }
+        },
+        "C": {
+            "13C/Unsub": {
+                "Delta VPDB": -84.9,
+                "Error": 0
+            }
+        },
+        "SIG": {
+            "13C/Unsub": {
+                "Delta VPDB": -101.0,
+                "Error": 0.1
+            }
+        },
+        "ARC": {
+            "13C/Unsub": {
+                "Delta VPDB": -70.6,
+                "Error": 0.1
+            }
+        },
+        "BTC": {
+            "13C/Unsub": {
+                "Delta VPDB": -66.9,
+                "Error": 0.3
+            }
+        },
+        "THR2": {
+            "13C/Unsub": {
+                "Delta VPDB": -65.8,
+                "Error": 0.2
+            }
+        },
+        "THR1": {
+            "13C/Unsub": {
+                "Delta VPDB": -65.6,
+                "Error": 0.4
+            }
+        }
+    },
+    "Solvent 2023": {
+        "A": {
+            "13C/Unsub": {
+                "Delta VPDB": -83.3,
+                "Error": 0
+            }
+        },
+        "K": {
+            "13C/Unsub": {
+                "Delta VPDB": -102.7,
+                "Error": 0
+            }
+        },
+        "I": {
+            "13C/Unsub": {
+                "Delta VPDB": -76.0,
+                "Error": 0
+            }
+        },
+        "C": {
+            "13C/Unsub": {
+                "Delta VPDB": -84.5,
+                "Error": 0
+            }
+        },
+        "SIG": {
+            "13C/Unsub": {
+                "Delta VPDB": -100.5,
+                "Error": 0.2
+            }
+        }
+    },
+    "UNM 2023": {
+        "A": {
+            "D/Unsub": {
+                "Delta VPDB": -142.8,
+                "Error": 0.7
+            }
+        },
+        "M": {
+            "D/Unsub": {
+                "Delta VPDB": -171.4,
+                "Error": 1.7
+            }
+        },
+        "K": {
+            "D/Unsub": {
+                "Delta VPDB": -179.5,
+                "Error": 3.1
+            }
+        },
+        "I": {
+            "D/Unsub": {
+                "Delta VPDB": -183.5,
+                "Error": 3.6
+            }
+        },
+        "C": {
+            "D/Unsub": {
+                "Delta VPDB": -151.0,
+                "Error": 3.1
+            }
+        },
+        "F": {
+            "D/Unsub": {
+                "Delta VPDB": -19.4,
+                "Error": 0.2
+            }
+        },
+        "SIG": {
+            "D/Unsub": {
+                "Delta VPDB": -159.4,
+                "Error": 2.6
+            }
+        },
+        "ARC": {
+            "D/Unsub": {
+                "Delta VPDB": -209.7,
+                "Error": 0.6
+            }
+        },
+        "BTC": {
+            "D/Unsub": {
+                "Delta VPDB": -238.2,
+                "Error": 1.7
+            }
+        },
+        "THR2": {
+            "D/Unsub": {
+                "Delta VPDB": -233.6,
+                "Error": 1.4
+            }
+        },
+        "THR1": {
+            "D/Unsub": {
+                "Delta VPDB": -231.4,
+                "Error": 0.4
+            }
+        }
+    }
+}
+
