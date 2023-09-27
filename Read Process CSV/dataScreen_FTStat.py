@@ -25,15 +25,20 @@ def RSESNScreen(allOutputDict):
     Outputs:
         None. Prints flags for peaks that exceed the threshold. 
     '''
-
+    failedRSE = {}
     for fragKey, ratioData in allOutputDict[0].items():
         for ratio in ratioData.keys():
+            iso = ratio.split('/')[0]
+            failedRSE[iso] = []
             for fileIdx, fileData in enumerate(allOutputDict):
 
                 RSESN = fileData[fragKey][ratio]['RelStError'] / fileData[fragKey][ratio]['ShotNoiseLimit by Quadrature']
                 
                 if RSESN >= 2:
                     print('File ' + str(fileIdx) + ' ' + fragKey + ' ' + ratio + ' fails RSE/SN Test with value of ' + str(RSESN))
+                    failedRSE[iso].append(fileIdx)
+
+    return failedRSE
 
 def zeroCountsScreen(mergedDict, subNameList, threshold = 0):
     '''
@@ -49,10 +54,11 @@ def zeroCountsScreen(mergedDict, subNameList, threshold = 0):
     Outputs:
         None. Prints the name of peaks with more than the threshold number of zero scans. 
     '''
-    
+    failedZero = {}
     firstKey = list(mergedDict.keys())[0]
 
     for iso in subNameList:
+        failedZero[iso] = []
         for fileIdx, (fileName, fileData) in enumerate(mergedDict.items()):
             thisMergedDf = fileData[0]
             thisIsoFileZeros = len(thisMergedDf['counts' + iso].values) - np.count_nonzero(thisMergedDf['counts' + iso].values)
@@ -60,6 +66,20 @@ def zeroCountsScreen(mergedDict, subNameList, threshold = 0):
             thisIsoFileZerosFraction = thisIsoFileZeros / len(thisMergedDf['counts' + iso])
             if thisIsoFileZerosFraction > threshold:
                 print(fileName + ' ' + iso + ' has ' + str(thisIsoFileZeros) + ' zero scans, out of ' + str(len(thisMergedDf['counts' + iso])) + ' scans (' + str(thisIsoFileZerosFraction) + ')') 
+                failedZero[iso].append(fileName)
+
+    return failedZero
+
+def TICITScreen(mergedDict):
+    failedTICIT = []
+    for fileIdx, (fileName, fileData) in enumerate(mergedDict.items()):
+        thisMergedDf = fileData[0]
+        RSD = thisMergedDf['TIC*IT'].std() / thisMergedDf['TIC*IT'].mean()
+        if RSD > 0.1:
+            print(fileName + ' ' f'{RSD:.2f}' + ' has TIC*IT RSD greater than threshold')
+            failedTICIT.append(fileName)
+
+    return failedTICIT
 
 def subsequenceOutlierDetection(timeSeries, priorSubsequenceLength = 1000, testSubsequenceLength = 1000):
     '''
@@ -98,9 +118,11 @@ def internalStabilityScreenSubsequence(mergedDict, subNameList, mostAbundantSub,
     Outputs:
         No output; prints the identity of any file failing the test. 
     '''
+    failedSubsequence = {}
     firstKey = list(mergedDict.keys())[0]
   
     for iso in subNameList:
+        failedSubsequence[iso] = []
         print(iso)
         for fileIdx, (fileName, fileData) in enumerate(mergedDict.items()):
             thisMergedDf = fileData[0]
@@ -115,3 +137,6 @@ def internalStabilityScreenSubsequence(mergedDict, subNameList, mostAbundantSub,
             allDev = subsequenceOutlierDetection(series, priorSubsequenceLength = priorSubsequenceLength, testSubsequenceLength = testSubsequenceLength)
             if max(allDev) > thresholdConstant:
                 print("Failed Subsequence Detection " +  fileName + " " + iso + " with a value of " + "{:.2f}".format(max(allDev)))
+                failedSubsequence[iso].append(fileName)
+
+    return failedSubsequence

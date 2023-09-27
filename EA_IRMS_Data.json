@@ -183,67 +183,67 @@
     "UNM 2023": {
         "A": {
             "D/Unsub": {
-                "Delta VPDB": -142.8,
+                "Delta VSMOW": -142.8,
                 "Error": 0.7
             }
         },
         "M": {
             "D/Unsub": {
-                "Delta VPDB": -171.4,
+                "Delta VSMOW": -171.4,
                 "Error": 1.7
             }
         },
         "K": {
             "D/Unsub": {
-                "Delta VPDB": -179.5,
+                "Delta VSMOW": -179.5,
                 "Error": 3.1
             }
         },
         "I": {
             "D/Unsub": {
-                "Delta VPDB": -183.5,
+                "Delta VSMOW": -183.5,
                 "Error": 3.6
             }
         },
         "C": {
             "D/Unsub": {
-                "Delta VPDB": -151.0,
+                "Delta VSMOW": -151.0,
                 "Error": 3.1
             }
         },
         "F": {
             "D/Unsub": {
-                "Delta VPDB": -19.4,
+                "Delta VSMOW": -19.4,
                 "Error": 0.2
             }
         },
         "SIG": {
             "D/Unsub": {
-                "Delta VPDB": -159.4,
+                "Delta VSMOW": -159.4,
                 "Error": 2.6
             }
         },
         "ARC": {
             "D/Unsub": {
-                "Delta VPDB": -209.7,
+                "Delta VSMOW": -209.7,
                 "Error": 0.6
             }
         },
         "BTC": {
             "D/Unsub": {
-                "Delta VPDB": -238.2,
+                "Delta VSMOW": -238.2,
                 "Error": 1.7
             }
         },
         "THR2": {
             "D/Unsub": {
-                "Delta VPDB": -233.6,
+                "Delta VSMOW": -233.6,
                 "Error": 1.4
             }
         },
         "THR1": {
             "D/Unsub": {
-                "Delta VPDB": -231.4,
+                "Delta VSMOW": -231.4,
                 "Error": 0.4
             }
         }
