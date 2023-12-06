@@ -135,7 +135,7 @@
                 "Error": 0.3
             }
         },
-        "THR2": {
+        "AA": {
             "13C/Unsub": {
                 "Delta VPDB": -65.8,
                 "Error": 0.2
@@ -235,7 +235,7 @@
                 "Error": 1.7
             }
         },
-        "THR2": {
+        "AA": {
             "D/Unsub": {
                 "Delta VSMOW": -233.6,
                 "Error": 1.4

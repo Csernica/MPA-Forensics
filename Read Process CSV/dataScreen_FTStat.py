@@ -70,12 +70,12 @@ def zeroCountsScreen(mergedDict, subNameList, threshold = 0):
 
     return failedZero
 
-def TICITScreen(mergedDict):
+def TICITScreen(mergedDict, threshold=0.15):
     failedTICIT = []
     for fileIdx, (fileName, fileData) in enumerate(mergedDict.items()):
         thisMergedDf = fileData[0]
         RSD = thisMergedDf['TIC*IT'].std() / thisMergedDf['TIC*IT'].mean()
-        if RSD > 0.1:
+        if RSD > threshold:
             print(fileName + ' ' f'{RSD:.2f}' + ' has TIC*IT RSD greater than threshold')
             failedTICIT.append(fileName)
 

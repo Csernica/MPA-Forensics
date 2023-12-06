@@ -135,12 +135,12 @@ def linearStandard(thisVals, thisRSEs):
     smpErr = np.array(smpErr)
 
     #Predict values of the standard at these timepoints
-    smpPreds = slope * smpxs + intercept
-    smpErrPreds = errorAtX(smpxs)
+    stdPreds = np.array(slope * smpxs + intercept)
+    stdRSEPreds = errorAtX(smpxs) / stdPreds
 
     #Standardize
-    smpStdVals = smps / smpPreds
-    smpStdErrs = np.sqrt(smpErr**2 + smpErrPreds**2)
+    smpStdVals = smps / stdPreds
+    smpStdErrs = np.sqrt(smpErr**2 + stdRSEPreds**2)
 
     return np.array(smpStdVals), np.array(smpStdErrs)
 
