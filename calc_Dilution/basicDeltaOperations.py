@@ -179,6 +179,45 @@ def ratioToDelta(atomIdentity, ratio):
         
     return delta
 
+def deltaToRatio(atomIdentity, delta):
+    '''
+    Converts an input delta value into the corresponding isotope ratio
+
+    Inputs:
+        atomID: A string, the atom of interest
+        delta: The delta value
+
+    Outputs:
+        ratio: The corresponding isotope ratio
+    '''
+    ratio = 0
+    if atomIdentity == 'D':
+        atomIdentity = 'H'
+        
+    if atomIdentity in 'HCN' or atomIdentity in ['13C','15N']:
+        #in case atomIdentity is 2H, 13C, 15N, take last character only
+        ratio = STD_Rs[atomIdentity[-1]]* (delta / 1000 + 1)
+        
+    elif atomIdentity == 'O' or atomIdentity == '17O':
+        ratio = STD_Rs['17O']* (delta / 1000 + 1)
+        
+    elif atomIdentity == '18O':
+        ratio = STD_Rs['18O']* (delta / 1000 + 1)
+        
+    elif atomIdentity == 'S' or atomIdentity == '33S':
+        ratio = STD_Rs['33S']* (delta / 1000 + 1)
+        
+    elif atomIdentity == '34S':
+        ratio = STD_Rs['34S']* (delta / 1000 + 1)
+        
+    elif atomIdentity == '36S':
+        ratio = STD_Rs['36S']* (delta / 1000 + 1)
+        
+    else:
+        raise Exception('Sorry, I do not know how to deal with ' + atomIdentity)
+        
+    return ratio
+
 def compareRelDelta(atomID, deltaStd, deltaSmp):
     '''
     Given at atom ID and two deltas in VPDB etc. space, finds their relative difference (not in VPDB etc. space). This is useful for making sample standard comparisons. 
